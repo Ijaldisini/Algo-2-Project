@@ -366,46 +366,33 @@ def rute_pengiriman():
     print('\n' + '=' * 20 + ' MENU RUTE PENGIRIMAN ' + '=' * 20 + '\n')
     # Tambahkan logika untuk rute pengiriman
 
-
-def sort_stock(data, jalan=True):
+def sort_stock(data):
     n = len(data)
     for i in range(n):
         indek_min = i
         for j in range(i + 1, n):
-            if jalan:
-                if data[j][2] < data[indek_min][2]:
-                    indek_min = j
-            else:
-                if data[j][2] > data[indek_min][2]:
-                    indek_min = j
+            if data[j][2] < data[indek_min][2]:
+                indek_min = j
         data[i], data[indek_min] = data[indek_min], data[i]
     return data
 
-def sort_id(data, jalan=True):
+def sort_id(data):
     n = len(data)
     for i in range(n):
         indek_min = i
         for j in range(i + 1, n):
-            if jalan:
-                if data[j][0] < data[indek_min][0]:
-                    indek_min = j
-            else:
-                if data[j][0] > data[indek_min][0]:
-                    indek_min = j
+            if data[j][0] < data[indek_min][0]:
+                indek_min = j
         data[i], data[indek_min] = data[indek_min], data[i]
     return data
 
-def sort_nama(data, jalan1=True):
+def sort_nama(data):
     n = len(data)
     for i in range(n):
         index_min = i
         for j in range(i + 1, n):
-            if jalan1:
-                if data[j][1].lower() < data[index_min][1].lower():
-                    index_min = j
-            else:
-                if data[j][1].lower() > data[index_min][1].lower():
-                    index_min = j
+            if data[j][1].lower() < data[index_min][1].lower():
+                index_min = j
         data[i], data[index_min] = data[index_min], data[i]
     return data
 
@@ -421,7 +408,6 @@ def cari_nama(data, target):
         else:
             kanan = tengah - 1
     return -1
-
 
 def data_full():
     conn = connect_db()
