@@ -11,9 +11,9 @@ import time
 def connect_db():
     conn = psycopg2.connect(
     host="localhost",
-    database="Algo2",
+    database="DBAlgo2",
     user="postgres",
-    password="syadid1306",
+    password="@Raditya14",
     port=5432
     )     
     return conn
@@ -371,21 +371,6 @@ def rute_pengiriman():
     print('\n' + '=' * 20 + ' MENU RUTE PENGIRIMAN ' + '=' * 20 + '\n')
     # Tambahkan logika untuk rute pengiriman
 
-def selection_sort_by_stok(data, jalan=True):
-    n = len(data)
-    for i in range(n):
-        index_awal = i
-        for j in range(i + 1, n):
-            
-            if jalan:
-                if data[j][2] < data[index_awal][2]:
-                    index_awal = j
-                    
-            else:
-                if data[j][2] > data[index_awal][2]:
-                    index_awal = j
-        data[i], data[index_awal] = data[index_awal], data[i]
-    return data
 
 def sort_stock(data, jalan=True):
     n = len(data)
