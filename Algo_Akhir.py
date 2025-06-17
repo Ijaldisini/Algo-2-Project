@@ -325,13 +325,13 @@ def penjualan_hasil_tani():
         
         else:
             if not pilihan.isdigit():
-                print("\n⚠️ID request harus berupa angka!!!")
+                print("\n⚠️ ID request harus berupa angka!!!")
                 time.sleep(1)
                 continue
             
             pilihan = int(pilihan)
             if pilihan <= 0:
-                print("\n⚠️ID request tidak valid!!!")
+                print("\n⚠️ ID request tidak valid!!!")
                 time.sleep(1)
                 continue
             
